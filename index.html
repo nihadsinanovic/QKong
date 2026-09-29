@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#111114">
+  <meta name="description" content="QKong — a Game &amp; Watch style multi-screen arcade game. Dodge the Qvantum barrels and topple Kong.">
+  <title>QKong</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="stage">
+    <div id="device" aria-label="QKong handheld">
+      <div class="clasp"></div>
+
+      <!-- ============ TOP HALF ============ -->
+      <section class="half top">
+        <div class="side-panel left"><i></i></div>
+        <div class="side-panel right"><i></i></div>
+        <span class="screw s1"></span>
+        <span class="screw s2"></span>
+        <span class="screw s3"></span>
+        <span class="screw s4"></span>
+
+        <div class="title-pill">QKONG</div>
+
+        <div class="bezel top-bezel">
+          <div class="lcd"><canvas id="cv-top" aria-label="Upper game screen"></canvas></div>
+        </div>
+      </section>
+
+      <!-- ============ HINGE ============ -->
+      <div class="hinge">
+        <div class="knuckle left"></div>
+        <div class="slot"><div class="strip"></div></div>
+        <div class="knuckle right"></div>
+      </div>
+
+      <!-- ============ BOTTOM HALF ============ -->
+      <section class="half bottom">
+        <div class="groove"></div>
+
+        <div class="gw-label"><span>GAME</span><span>&amp;</span><span>WATT</span></div>
+
+        <div class="panel ctrl-panel">
+          <div class="dpad" id="dpad">
+            <div class="dp-hole"></div>
+            <div class="dp-arm v"></div>
+            <div class="dp-arm h"></div>
+            <div class="dp-dimple"></div>
+            <button class="dp up"    data-key="up"    aria-label="Up"></button>
+            <button class="dp down"  data-key="down"  aria-label="Down"></button>
+            <button class="dp left"  data-key="left"  aria-label="Left"></button>
+            <button class="dp right" data-key="right" aria-label="Right"></button>
+          </div>
+          <span class="panel-text">CONTROLLER</span>
+        </div>
+
+        <div class="bezel bottom-bezel">
+          <div class="lcd"><canvas id="cv-bot" aria-label="Lower game screen"></canvas></div>
+        </div>
+
+        <div class="brand-pill"><span>Qvantum</span></div>
+
+        <div class="mode-buttons">
+          <div class="mb" style="left:0;top:0">
+            <button class="pill-btn" data-key="gameA" aria-label="Game A"></button>
+            <label>GAME A</label>
+          </div>
+          <span class="led" style="left:96px;top:40px"></span><em class="led-label" style="left:84px;top:56px">ALARM</em>
+
+          <div class="mb" style="left:10px;top:66px">
+            <button class="pill-btn" data-key="gameB" aria-label="Game B"></button>
+            <label>GAME B</label>
+          </div>
+          <button class="led sound" id="sound-led" data-key="sound" style="left:108px;top:108px" aria-label="Toggle sound"></button><em class="led-label" style="left:104px;top:124px">ACL</em>
+
+          <div class="mb" style="left:22px;top:132px">
+            <button class="pill-btn" data-key="time" aria-label="Time"></button>
+            <label>TIME</label>
+          </div>
+        </div>
+
+        <div class="panel jump-panel">
+          <span class="start-box">START</span>
+          <button class="jump-btn" data-key="jump" aria-label="Jump / Start"></button>
+          <span class="panel-text">JUMP</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <p id="hint">
+    <b>←→↑↓</b> move · <b>Space</b> jump · <b>1</b> Game A · <b>2</b> Game B · <b>T</b> time · <b>M</b> sound
+  </p>
+
+  <script src="game.js"></script>
+</body>
+</html>
