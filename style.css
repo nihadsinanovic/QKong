@@ -16,6 +16,14 @@
   --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
 }
 
+/* Jost (Futura revival, SIL OFL) subset to the letters of the Qvantum wordmark */
+@font-face {
+  font-family: "QvantumWordmark";
+  font-weight: 500;
+  font-display: block;
+  src: url("fonts/jost-500-qvantum.woff2") format("woff2");
+}
+
 * { box-sizing: border-box; }
 
 html, body {
@@ -197,8 +205,11 @@ body {
   background: #151413;
   color: #f7f3ec;
   text-align: center;
-  font: 800 30px/52px "Arial Rounded MT Bold", "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: 1px;
+  /* Qvantum wordmark: geometric sans (Futura family), caps, wide tracking */
+  font: 500 25px/52px "QvantumWordmark", "Futura", "Century Gothic", "Avenir Next", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  padding-left: .5em; /* balance the trailing letter-spacing so it stays centred */
 }
 
 .gw-label {
