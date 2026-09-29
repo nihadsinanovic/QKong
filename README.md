@@ -41,3 +41,9 @@ Then open http://localhost:8000.
 3. Click **Deploy**.
 
 You can also deploy from the CLI with `npx vercel --prod` in this folder.
+
+## Credits
+
+The "QVANTUM" plate uses [Jost](https://github.com/indestructible-type/Jost)
+by indestructible type*, licensed under the SIL Open Font License 1.1. It's
+subset to the letters of the wordmark.
